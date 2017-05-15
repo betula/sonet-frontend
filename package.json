@@ -1,5 +1,5 @@
 {
-  "name": "sonet-frontend-ng",
+  "name": "sonet-frontend",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -22,10 +22,12 @@
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
-    "zone.js": "^0.8.4"
+    "zone.js": "^0.8.4",
+    "sanitize.css": "5.0.0",
+    "fontfaceobserver": "2.0.9"
   },
   "devDependencies": {
-    "@angular/cli": "1.0.1",
+    "@angular/cli": "1.0.3",
     "@angular/compiler-cli": "^4.0.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",

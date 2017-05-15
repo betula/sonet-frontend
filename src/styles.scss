@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~sanitize.css";
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  .--open-sans-font-loaded {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+}
