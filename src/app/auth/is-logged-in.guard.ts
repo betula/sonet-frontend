@@ -25,7 +25,6 @@ export class IsLoggedInGuard implements CanActivate, CanActivateChild, CanLoad {
   }
 
   private checkLoggedIn(redirectUrl: string): boolean {
-    console.log('checkLoggedIn', redirectUrl);
     const isLoggedIn: boolean = this.authService.isLoggedIn;
 
     if (!isLoggedIn) {

@@ -12,8 +12,6 @@ export class IsLoggedOutGuard implements CanActivate {
   }
 
   private checkLoggedOut(): boolean {
-    console.log('checkLoggedOut');
-
     const isLoggedOut: boolean = !this.authService.isLoggedIn;
 
     if (!isLoggedOut) {
