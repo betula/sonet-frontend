@@ -6,9 +6,17 @@ import {Title} from "@angular/platform-browser";
 @Component({
   selector: 'sn-login',
   styleUrls: ['./login.component.scss'],
-  template: `    
-    <button (click)="login()">Login</button>
-    <a routerLink="/sign-up">Sign Up</a>
+  template: `
+    <sn-layout>
+      <form>
+        <div>User name: <input></div>
+        <div>Password: <input type="password"></div>
+        <div>
+          <button (click)="login()">Login</button>
+          <a routerLink="/sign-up">Sign Up</a>
+        </div>
+      </form>
+    </sn-layout>
   `,
   styles: []
 })

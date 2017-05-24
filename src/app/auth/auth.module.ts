@@ -7,13 +7,14 @@ import { AuthService } from './auth.service';
 import { IsLoggedInGuard } from './is-logged-in.guard';
 import { IsLoggedOutGuard } from './is-logged-out.guard';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   imports: [
     CommonModule,
     AuthRoutingModule
   ],
-  declarations: [LoginComponent, SignUpComponent],
+  declarations: [LoginComponent, SignUpComponent, LayoutComponent],
   providers: [
     AuthService,
     IsLoggedInGuard,
