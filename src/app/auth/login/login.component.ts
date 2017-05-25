@@ -5,11 +5,16 @@ import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'sn-login',
-  styleUrls: ['./login.component.scss'],
   template: `
     <sn-layout>
       <form>
-        <div>User name: <input></div>
+        <div>User name: 
+          <input>
+          <sn-tooltip>
+            <span data-handler>?</span>
+            <div data-content>Letters A-Za-z and digits 0-9</div>
+          </sn-tooltip>
+        </div>
         <div>Password: <input type="password"></div>
         <div>
           <button (click)="login()">Login</button>
@@ -18,7 +23,7 @@ import {Title} from "@angular/platform-browser";
       </form>
     </sn-layout>
   `,
-  styles: []
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
 

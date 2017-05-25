@@ -4,13 +4,13 @@ import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'sn-main',
-  styleUrls: ['./main.component.scss'],
   template: `
     <p>
       main works!
     </p>
     <button (click)="logout()">Logout</button>
-  `
+  `,
+  styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
 

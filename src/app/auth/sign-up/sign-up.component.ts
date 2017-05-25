@@ -5,7 +5,6 @@ import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'sn-sign-up',
-  styleUrls: ['./sign-up.component.scss'],
   template: `
     <sn-layout>
       <form>
@@ -18,7 +17,8 @@ import {Title} from "@angular/platform-browser";
         </div>
       </form>
     </sn-layout>
-  `
+  `,
+  styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
 
