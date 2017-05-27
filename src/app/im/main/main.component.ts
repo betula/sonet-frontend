@@ -6,8 +6,10 @@ import {Title} from "@angular/platform-browser";
   selector: 'sn-main',
   template: `
     <p>
-      main works!
+      <a routerLink="feed">feed</a>
+      <a routerLink="profile">profile</a>
     </p>
+    <router-outlet></router-outlet>
     <button (click)="logout()">Logout</button>
   `,
   styleUrls: ['./main.component.scss']
