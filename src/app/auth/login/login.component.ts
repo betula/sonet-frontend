@@ -17,7 +17,7 @@ import {Title} from "@angular/platform-browser";
         </div>
         <div>Password: <input type="password"></div>
         <div>
-          <button (click)="login()">Login</button>
+          <button (click)="login($event)">Login</button>
           <a routerLink="/sign-up">Sign Up</a>
         </div>
       </form>
@@ -38,11 +38,12 @@ export class LoginComponent implements OnInit {
     this.router.navigateByUrl(redirectUrl || '/', <NavigationExtras>{ replaceUrl: true });
   }
 
-  login() {
+  login(event) {
+    event.preventDefault();
+
     this.authService.login().toPromise().then(() => {
       this.loginSuccessful();
     });
-
   }
 
 }
