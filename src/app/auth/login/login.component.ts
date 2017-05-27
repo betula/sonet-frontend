@@ -17,7 +17,7 @@ import {Title} from "@angular/platform-browser";
         </div>
         <div>Password: <input type="password"></div>
         <div>
-          <button (click)="login()">Login</button>
+          <button (click)="login(); false">Login</button>
           <a routerLink="/sign-up">Sign Up</a>
         </div>
       </form>
@@ -42,7 +42,6 @@ export class LoginComponent implements OnInit {
     this.authService.login().toPromise().then(() => {
       this.loginSuccessful();
     });
-
   }
 
 }
