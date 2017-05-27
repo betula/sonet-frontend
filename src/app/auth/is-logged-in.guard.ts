@@ -20,7 +20,7 @@ export class IsLoggedInGuard implements CanActivate, CanActivateChild, CanLoad {
   }
 
   canLoad(route: Route): boolean {
-    const redirectUrl = `/${route.path}`;
+    const redirectUrl = document.location.pathname;
     return this.checkLoggedIn(redirectUrl);
   }
 
