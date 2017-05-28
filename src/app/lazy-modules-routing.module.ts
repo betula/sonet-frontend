@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {IsLoggedInGuard} from "./auth/is-logged-in.guard";
+import {IsLoggedInGuard} from "./main/is-logged-in.guard";
 
 const routes: Routes = [
   { path: '', redirectTo: 'im', pathMatch: 'full' },
@@ -15,4 +15,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class LazyModulesRoutingModule { }

@@ -10,13 +10,15 @@
   background: #FF5600;
   display: flex;
   align-items: center;
-  padding-left: 5px;
+  padding: 0 5px;
+  justify-content: space-between;
 }
 
-.header-title {
+.header-title, .header-login, .header-logout {
   text-transform: uppercase;
   color: #FFF;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .footer {

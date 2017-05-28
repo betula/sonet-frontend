@@ -1,25 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AuthRoutingModule } from './auth-routing.module';
+import { MainRoutingModule } from './main-routing.module';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './auth.service';
 import { IsLoggedInGuard } from './is-logged-in.guard';
 import { IsLoggedOutGuard } from './is-logged-out.guard';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { LayoutComponent } from './layout/layout.component';
-import { TooltipComponent } from './tooltip/tooltip.component';
+import {NotFoundComponent} from "./not-found/not-found.component";
+import {MainUiModule} from "../main-ui/main-ui.module";
 
 @NgModule({
   imports: [
     CommonModule,
-    AuthRoutingModule
+    MainRoutingModule,
+    MainUiModule
   ],
-  declarations: [LoginComponent, SignUpComponent, LayoutComponent, TooltipComponent],
+  declarations: [LoginComponent, SignUpComponent, NotFoundComponent],
   providers: [
     AuthService,
     IsLoggedInGuard,
     IsLoggedOutGuard
   ]
 })
-export class AuthModule { }
+export class MainModule { }

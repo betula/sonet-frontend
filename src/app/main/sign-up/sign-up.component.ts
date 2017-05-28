@@ -3,7 +3,6 @@ import {AuthService} from "../auth.service";
 import {Title} from "@angular/platform-browser";
 
 @Component({
-  selector: 'sn-sign-up',
   template: `
     <sn-layout>
       <form>
