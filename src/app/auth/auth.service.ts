@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import {Observable} from "rxjs/Observable";
 import {Router} from "@angular/router";
+import {LocalStorage} from 'ng2-webstorage';
 
 @Injectable()
 export class AuthService {
 
-  isLoggedIn: boolean = false;
+  @LocalStorage()
+  isLoggedIn: boolean;
+
   redirectUrl: string;
 
   constructor(private router: Router) {}
