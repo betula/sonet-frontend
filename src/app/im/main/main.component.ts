@@ -3,7 +3,6 @@ import {AuthService} from "../../auth/auth.service";
 import {Title} from "@angular/platform-browser";
 
 @Component({
-  selector: 'sn-main',
   template: `
     <p>
       <a routerLink="feed">feed</a>

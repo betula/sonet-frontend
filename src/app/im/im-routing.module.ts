@@ -5,7 +5,7 @@ import {IsLoggedInGuard} from "../auth/is-logged-in.guard";
 
 import {ProfileComponent} from "./profile/profile.component";
 import {FeedComponent} from "./feed/feed.component";
-import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import {NotFoundComponent} from "./not-found/not-found.component";
 
 const routes: Routes = [
   {
@@ -17,7 +17,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'feed', pathMatch: 'full' },
       { path: 'feed', component: FeedComponent },
       { path: 'profile', component: ProfileComponent },
-      { path: '**', component: PageNotFoundComponent }
+      { path: '**', component: NotFoundComponent }
     ]
   }
 ];

@@ -5,9 +5,9 @@ import {Title} from "@angular/platform-browser";
   template: `
     <h2>404 Not Found</h2>
   `,
-  styleUrls: ['./page-not-found.component.scss']
+  styleUrls: ['./not-found.component.scss']
 })
-export class PageNotFoundComponent implements OnInit {
+export class NotFoundComponent implements OnInit {
 
   constructor(private title: Title) {}
 
