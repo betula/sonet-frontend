@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from "../auth.service";
-import {NavigationExtras, Router} from "@angular/router";
 import {Title} from "@angular/platform-browser";
 
 @Component({
@@ -27,23 +26,16 @@ import {Title} from "@angular/platform-browser";
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router, private title: Title) {}
+  constructor(private authService: AuthService, private title: Title) {}
 
   ngOnInit() {
     this.title.setTitle('Login');
   }
 
-  loginSuccessful() {
-    const redirectUrl = this.authService.redirectUrl;
-    this.router.navigateByUrl(redirectUrl || '/', <NavigationExtras>{ replaceUrl: true });
-  }
-
   login(event) {
     event.preventDefault();
 
-    this.authService.login().toPromise().then(() => {
-      this.loginSuccessful();
-    });
+    this.authService.loginWithRedirect();
   }
 
 }

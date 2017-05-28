@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from "../auth.service";
-import {Router} from "@angular/router";
 import {Title} from "@angular/platform-browser";
 
 @Component({
@@ -22,21 +21,14 @@ import {Title} from "@angular/platform-browser";
 })
 export class SignUpComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router, private title: Title) { }
+  constructor(private authService: AuthService, private title: Title) { }
 
   ngOnInit() {
     this.title.setTitle('Sign Up');
   }
 
-  createAccountSuccessful() {
-    this.router.navigateByUrl('/');
-  }
-
   createAccount() {
-    this.authService.login().toPromise().then(() => {
-      this.createAccountSuccessful();
-    });
-
+    this.authService.loginWithRedirect();
   }
 
 }
