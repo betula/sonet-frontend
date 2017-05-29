@@ -12,7 +12,7 @@ const routes: Routes = [
     canActivateChild: [ IsLoggedOutGuard ],
     component: MainComponent,
     children: [
-      { path: '', redirectTo: './login', pathMatch: 'full' },
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: 'login', canActivate: [ IsLoggedOutGuard ], component: LoginComponent },
       { path: 'create-account', canActivate: [ IsLoggedOutGuard ], component: CreateAccountComponent }
     ]
