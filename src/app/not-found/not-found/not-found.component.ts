@@ -4,7 +4,9 @@ import {Title} from "@angular/platform-browser";
 @Component({
   template: `
     <sn-layout>
-      <h2>404 Not Found</h2>
+      <div sn-layout-content>
+        <h2>404 Not Found</h2>
+      </div>
     </sn-layout>
   `,
   styleUrls: ['./not-found.component.scss']

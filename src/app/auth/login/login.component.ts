@@ -3,23 +3,21 @@ import {AuthService} from "../auth.service";
 import {Title} from "@angular/platform-browser";
 
 @Component({
-  template: `
-    <sn-layout>
-      <form>
-        <div>User name: 
-          <input>
-          <sn-tooltip>
-            <span data-handler>?</span>
-            <div data-content>Letters A-Za-z and digits 0-9</div>
-          </sn-tooltip>
-        </div>
-        <div>Password: <input type="password"></div>
-        <div>
-          <button (click)="login($event)">Login</button>
-          <a routerLink="/sign-up">Sign Up</a>
-        </div>
-      </form>
-    </sn-layout>
+  template: `    
+    <form>
+      <div>User name: 
+        <input>
+        <sn-tooltip>
+          <span sn-tooltip-handler>?</span>
+          <div sn-tooltip-content>Letters A-Za-z and digits 0-9</div>
+        </sn-tooltip>
+      </div>
+      <div>Password: <input type="password"></div>
+      <div>
+        <button (click)="login($event)">Login</button>
+        <a routerLink="/auth/create-account">Sign Up</a>
+      </div>
+    </form>
   `,
   styleUrls: ['./login.component.scss']
 })

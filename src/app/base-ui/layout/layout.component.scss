@@ -14,11 +14,10 @@
   justify-content: space-between;
 }
 
-.header-title, .header-login, .header-logout {
+.header-title {
   text-transform: uppercase;
   color: #FFF;
   text-decoration: none;
-  cursor: pointer;
 }
 
 .footer {
@@ -28,11 +27,11 @@
   font-size: 80%;
 }
 
-.body {
+/deep/ [sn-layout-content] {
   flex-grow: 1;
 }
 
-.body, .footer {
+.footer {
   display: flex;
   align-items: center;
   justify-content: center;

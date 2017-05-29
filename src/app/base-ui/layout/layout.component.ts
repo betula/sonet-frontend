@@ -1,23 +1,18 @@
-import { Component } from '@angular/core';
-import {AuthService} from "../../auth/auth.service";
+import {Component, Directive} from '@angular/core';
+
+@Directive({
+  selector: '[sn-layout-header],[sn-layout-content]'
+})
+export class LayoutSlotDirective {}
 
 @Component({
   selector: 'sn-layout',
   template: `
     <div class="header">
       <a routerLink="/" class="header-title">Sonet</a>
-      <ng-container *ngIf="isLoggedOut">
-        <a routerLink="/login" class="header-login">Login</a>
-      </ng-container>
-      <ng-container *ngIf="isLoggedIn">
-        <a class="header-logout" (click)="logout()">Logout</a>
-      </ng-container>
+      <ng-content select="[sn-layout-header]"></ng-content>
     </div>
-    <div class="body">
-      <div class="body-content">
-        <ng-content></ng-content>
-      </div>
-    </div>
+    <ng-content select="[sn-layout-content]"></ng-content>
     <div class="footer">
       <div class="footer-content">&copy; 2017</div>
     </div>
@@ -25,19 +20,5 @@ import {AuthService} from "../../auth/auth.service";
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent {
-
-  constructor(private authService: AuthService) {}
-
-  get isLoggedIn() {
-    return this.authService.isLoggedIn
-  }
-
-  get isLoggedOut() {
-    return !this.authService.isLoggedIn
-  }
-
-  logout() {
-    this.authService.logout();
-  }
 
 }

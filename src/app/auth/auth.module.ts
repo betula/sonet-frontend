@@ -6,8 +6,9 @@ import { LoginComponent } from './login/login.component';
 import { AuthService } from './auth.service';
 import { IsLoggedInGuard } from './is-logged-in.guard';
 import { IsLoggedOutGuard } from './is-logged-out.guard';
-import { SignUpComponent } from './sign-up/sign-up.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
 import {BaseUiModule} from "../base-ui/base-ui.module";
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,7 @@ import {BaseUiModule} from "../base-ui/base-ui.module";
     AuthRoutingModule,
     BaseUiModule
   ],
-  declarations: [LoginComponent, SignUpComponent],
+  declarations: [LoginComponent, CreateAccountComponent, MainComponent],
   providers: [
     AuthService,
     IsLoggedInGuard,

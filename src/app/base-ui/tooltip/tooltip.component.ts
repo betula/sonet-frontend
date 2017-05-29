@@ -1,14 +1,19 @@
-import { Component } from '@angular/core';
+import {Component, Directive} from '@angular/core';
+
+@Directive({
+  selector: '[sn-tooltip-handler],[sn-tooltip-content]'
+})
+export class TooltipSlotDirective {}
 
 @Component({
   selector: 'sn-tooltip',
   template: `    
     <div class="handler" (mouseenter)="open()" (mouseleave)="close()">
-      <ng-content select="[data-handler]"></ng-content>
+      <ng-content select="[sn-tooltip-handler]"></ng-content>
     </div>
     <div class="content-placeholder">
       <div class="content" *ngIf="active">
-        <ng-content select="[data-content]"></ng-content>
+        <ng-content select="[sn-tooltip-content]"></ng-content>
       </div>
     </div>
   `,

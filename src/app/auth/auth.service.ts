@@ -25,7 +25,7 @@ export class AuthService {
 
   logout(): Promise<boolean> {
     this.isLoggedIn = false;
-    return this.router.navigateByUrl('/login');
+    return this.router.navigateByUrl('/auth/login');
   }
 
 }

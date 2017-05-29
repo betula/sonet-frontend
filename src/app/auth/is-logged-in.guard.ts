@@ -29,7 +29,7 @@ export class IsLoggedInGuard implements CanActivate, CanActivateChild, CanLoad {
 
     if (!isLoggedIn) {
       this.authService.redirectUrl = redirectUrl;
-      this.router.navigateByUrl('/login', <NavigationExtras>{ skipLocationChange: true });
+      this.router.navigateByUrl('/auth/login', <NavigationExtras>{ skipLocationChange: true });
     }
 
     return isLoggedIn;

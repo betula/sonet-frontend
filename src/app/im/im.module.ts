@@ -8,6 +8,7 @@ import { FeedComponent } from './feed/feed.component';
 import {NotFoundComponent} from "./not-found/not-found.component";
 import { FeedService } from './feed.service';
 import {BaseUiModule} from "../base-ui/base-ui.module";
+import { LogoutButtonComponent } from './logout-button/logout-button.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,7 @@ import {BaseUiModule} from "../base-ui/base-ui.module";
     ImRoutingModule,
     BaseUiModule
   ],
-  declarations: [MainComponent, ProfileComponent, FeedComponent, NotFoundComponent],
+  declarations: [MainComponent, ProfileComponent, FeedComponent, NotFoundComponent, LogoutButtonComponent],
   providers: [FeedService]
 })
 export class ImModule { }

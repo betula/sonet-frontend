@@ -5,11 +5,14 @@ import {Title} from "@angular/platform-browser";
 @Component({
   template: `
     <sn-layout>
-      <p>
-        <a routerLink="feed">feed</a>
-        <a routerLink="profile">profile</a>
-      </p>
-      <router-outlet></router-outlet>
+      <sn-logout-button sn-layout-header></sn-logout-button>
+      <div sn-layout-content>
+        <p>
+          <a routerLink="feed">feed</a>
+          <a routerLink="profile">profile</a>
+        </p>
+        <router-outlet></router-outlet>
+      </div>
     </sn-layout>
   `,
   styleUrls: ['./main.component.scss']
