@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthService} from "../../main/auth.service";
+import {AuthService} from "../../auth/auth.service";
 import {Title} from "@angular/platform-browser";
 
 @Component({

@@ -12,4 +12,4 @@ import {RouterModule} from "@angular/router";
   declarations: [LayoutComponent, TooltipComponent],
   exports: [LayoutComponent, TooltipComponent]
 })
-export class MainUiModule { }
+export class BaseUiModule { }

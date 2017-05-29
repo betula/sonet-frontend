@@ -7,13 +7,13 @@ import { ProfileComponent } from './profile/profile.component';
 import { FeedComponent } from './feed/feed.component';
 import {NotFoundComponent} from "./not-found/not-found.component";
 import { FeedService } from './feed.service';
-import {MainUiModule} from "../main-ui/main-ui.module";
+import {BaseUiModule} from "../base-ui/base-ui.module";
 
 @NgModule({
   imports: [
     CommonModule,
     ImRoutingModule,
-    MainUiModule
+    BaseUiModule
   ],
   declarations: [MainComponent, ProfileComponent, FeedComponent, NotFoundComponent],
   providers: [FeedService]

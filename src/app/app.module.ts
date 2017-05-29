@@ -4,8 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { LazyModulesRoutingModule } from './lazy-modules-routing.module';
-import {MainModule} from "./main/main.module";
+import { AppRoutingModule } from './app-routing.module';
+import {AuthModule} from "./auth/auth.module";
+import {NotFoundModule} from "./not-found/not-found.module";
 
 @NgModule({
   declarations: [
@@ -15,8 +16,9 @@ import {MainModule} from "./main/main.module";
     BrowserModule,
     FormsModule,
     HttpModule,
-    LazyModulesRoutingModule,
-    MainModule
+    AuthModule,
+    AppRoutingModule,
+    NotFoundModule
   ],
   providers: [
     Title

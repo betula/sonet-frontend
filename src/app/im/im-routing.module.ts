@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {MainComponent} from "./main/main.component";
-import {IsLoggedInGuard} from "../main/is-logged-in.guard";
+import {IsLoggedInGuard} from "../auth/is-logged-in.guard";
 
 import {ProfileComponent} from "./profile/profile.component";
 import {FeedComponent} from "./feed/feed.component";
